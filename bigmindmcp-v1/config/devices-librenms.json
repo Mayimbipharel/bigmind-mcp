@@ -1,0 +1,39 @@
+{
+  "vendor": "librenms",
+  "protocol": "http",
+  "description": "LibreNMS monitoring system - API access",
+  "connection": {
+    "protocol": "https",
+    "base_url": "https://librenms.example.com/api/v0",
+    "credentials": {
+      "api_token": "YOUR_LIBRENMS_API_TOKEN_HERE"
+    },
+    "verify_ssl": true
+  },
+  "devices": [
+    {
+      "id": "librenms-monitoring",
+      "name": "LibreNMS Monitoring System",
+      "type": "monitoring-system",
+      "profile": "librenms-api",
+      "connection": {
+        "protocol": "https",
+        "base_url": "https://librenms.example.com/api/v0",
+        "credentials": {
+          "api_token": "YOUR_LIBRENMS_API_TOKEN_HERE"
+        }
+      },
+      "tags": ["monitoring", "readonly", "api"],
+      "metadata": {
+        "capabilities": [
+          "get_devices",
+          "get_device_info",
+          "get_interfaces",
+          "get_health",
+          "get_alerts",
+          "get_ports"
+        ]
+      }
+    }
+  ]
+}

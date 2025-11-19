@@ -1,0 +1,23 @@
+{
+  "vendor": "juniper",
+  "protocol": "ssh",
+  "description": "Juniper network devices accessed via SSH",
+  "devices": [
+    {
+      "id": "juniper-fw-1",
+      "name": "Perimeter-Firewall",
+      "type": "firewall",
+      "profile": "juniper-junos",
+      "connection": {
+        "protocol": "ssh",
+        "host": "192.168.1.100",
+        "port": 22,
+        "credentials": {
+          "username": "admin",
+          "password": "CHANGE_ME"
+        }
+      },
+      "tags": ["production", "security", "perimeter"]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "general": {
+    "app_name": "BIGMIND",
+    "version": "2.0.0",
+    "environment": "development"
+  },
+  "connection_pool": {
+    "enabled": true,
+    "max_connections": 10,
+    "idle_timeout": 600000,
+    "connection_timeout": 30000
+  },
+  "ssh": {
+    "default_timeout": 30000,
+    "default_port": 22,
+    "enable_debug": false
+  },
+  "http": {
+    "default_timeout": 10000,
+    "retry_attempts": 3,
+    "retry_delay": 1000
+  },
+  "cache": {
+    "enabled": true,
+    "ttl": 300000,
+    "max_size": 1000
+  },
+  "logging": {
+    "level": "info",
+    "console": true,
+    "file": false,
+    "file_path": "./logs/bigmind.log"
+  },
+  "mcp": {
+    "server_name": "bigmind-network-manager",
+    "server_version": "2.0.0"
+  },
+  "api": {
+    "enabled": false,
+    "port": 3000,
+    "host": "localhost",
+    "cors_enabled": true,
+    "rate_limit": {
+      "window_ms": 60000,
+      "max_requests": 100
+    }
+  }
+}

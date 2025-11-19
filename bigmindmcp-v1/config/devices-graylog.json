@@ -1,0 +1,40 @@
+{
+  "vendor": "graylog",
+  "protocol": "http",
+  "description": "Graylog logging system - API access",
+  "connection": {
+    "protocol": "https",
+    "base_url": "https://graylog.example.com/api",
+    "credentials": {
+      "username": "admin",
+      "password": "YOUR_GRAYLOG_PASSWORD_HERE"
+    },
+    "verify_ssl": true
+  },
+  "devices": [
+    {
+      "id": "graylog-logs",
+      "name": "Graylog Log Aggregator",
+      "type": "logging-system",
+      "profile": "graylog-api",
+      "connection": {
+        "protocol": "https",
+        "base_url": "https://graylog.example.com/api",
+        "credentials": {
+          "username": "admin",
+          "password": "YOUR_GRAYLOG_PASSWORD_HERE"
+        }
+      },
+      "tags": ["logging", "security", "api"],
+      "metadata": {
+        "capabilities": [
+          "search_logs",
+          "get_streams",
+          "get_alerts",
+          "get_dashboards",
+          "get_inputs"
+        ]
+      }
+    }
+  ]
+}

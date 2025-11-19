@@ -1,0 +1,55 @@
+{
+  "vendor": "cisco",
+  "protocol": "ssh",
+  "description": "Cisco network devices accessed via SSH",
+  "devices": [
+    {
+      "id": "router1",
+      "name": "BG-RT",
+      "type": "router",
+      "profile": "cisco-ios-legacy",
+      "connection": {
+        "protocol": "ssh",
+        "host": "172.22.21.254",
+        "port": 22,
+        "credentials": {
+          "username": "admin",
+          "password": "cisco"
+        }
+      },
+      "tags": ["production", "core", "datacenter-1"]
+    },
+    {
+      "id": "router2",
+      "name": "BG-FUSION",
+      "type": "router",
+      "profile": "cisco-ios-legacy",
+      "connection": {
+        "protocol": "ssh",
+        "host": "172.28.1.254",
+        "port": 22,
+        "credentials": {
+          "username": "admin",
+          "password": "cisco"
+        }
+      },
+      "tags": ["production", "distribution", "datacenter-1"]
+    },
+    {
+      "id": "switch1",
+      "name": "BG-FE01",
+      "type": "switch",
+      "profile": "cisco-ios-legacy",
+      "connection": {
+        "protocol": "ssh",
+        "host": "172.28.1.21",
+        "port": 22,
+        "credentials": {
+          "username": "admin",
+          "password": "cisco"
+        }
+      },
+      "tags": ["production", "access", "floor-1"]
+    }
+  ]
+}
